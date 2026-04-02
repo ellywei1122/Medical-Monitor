@@ -1,0 +1,2053 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	
+<title>無標題文件</title>
+<style> 
+	.bg-features {
+  background-image: url('https://www.britemed.com.tw/_upload/news/images/MedicalDeviceOEMODM/Background2.jpeg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.bg-features::before {
+  content:"";
+  background: url("/_upload/support/images/MedicalDeviceOEMODM/Background2.jpeg") center/cover no-repeat;
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.55);
+  z-index: 1;
+}
+
+.bg-features > * {
+  position: relative;
+  z-index: 2;
+}
+
+:root {
+  --brand-dark: #003b4d;
+  --text-main: #333333;
+  --text-light: #666666;
+  --bg-section: #f8f9fa;
+  --card-bg: #ffffff;
+  --accent: #007690;
+  --radius-lg: 16px;
+  --radius-sm: 8px;
+}
+
+.ecg-content-wrapper {
+  font-family: Arial, "Microsoft JhengHei", "Microsoft YaHei", sans-serif;
+  color: grey;
+  line-height: 1.6;
+  margin: 0;
+  background-color: #fff;
+  font-size: 16px;
+}
+
+.table-cell-base {
+  font-size: 16px;
+}
+
+.text-base {
+  margin: 0 0 1em;
+  font-size: 16px;
+}
+
+.flex-inline-center {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.icon-sm {
+  width: 20px;
+  vertical-align: middle;
+  margin-right: 10px;
+  height: auto;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.sub-tab-panel {
+  display: none;
+}
+
+.sub-tab-panel.active {
+  display: block;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background-image: url('https://www.britemed.com.tw/_upload/news/images/MedicalDeviceOEMODM/BriteMED_manufacturing.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.banner .container {
+  width: 1140px;
+  padding: 5px 5px;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.banner-title-box {
+  position: relative;
+  background: rgba(0, 0, 0, 0.2);
+  padding: clamp(10px, 2vw, 30px) clamp(15px, 3vw, 30px);
+  border-radius: clamp(5px, 1vw, 10px);
+  max-width: 30%;
+  min-width: 25%;
+  margin: 0 0 0 10px;
+}
+
+.banner-title-box h1 {
+  font-size: clamp(20px, 3vw, 30px);
+  font-weight: 400;
+  text-align: left;
+  color: #fff;
+  line-height: 1.4;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .banner {
+    justify-content: center;
+    text-align: center;
+    height: 240px;
+  }
+
+  .banner .container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: center;
+  }
+
+  .banner-title-box {
+    max-width: 92%;
+    min-width: 0;
+    width: 92%;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  .banner-title-box h1 {
+    text-align: center;
+  }
+}
+
+.page-wrapper {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 24px 16px 80px;
+}
+	:root {
+  --brand: #007690;
+  --brand-dark: #003b4d;
+  --brand-light: #eaf6f8;
+  --heading: #183642;
+  --text: #4f5b62;
+  --border: #d9e3e8;
+  --bg-card: #ffffff;
+  --bg-soft: #f7f9fb;
+  --shadow: 0 12px 28px rgba(0, 59, 77, 0.08);
+  --radius-lg: 24px;
+  --radius-md: 18px;
+}
+
+/* QUICK SELECTOR */
+.quick-selector {
+  margin-top: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.quick-selector-card {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  padding: 24px;
+  border: 1px solid rgba(0, 118, 144, 0.08);
+}
+
+.selector-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr 1fr;
+  gap: 16px;
+  align-items: stretch;
+}
+
+.selector-intro {
+  padding: 12px;
+}
+
+.selector-intro .eyebrow {
+  display: inline-block;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--brand);
+  margin-bottom: 12px;
+}
+
+.selector-intro h2 {
+  color: var(--heading);
+  line-height: 1.25;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.selector-intro p {
+  margin-bottom: 0;
+  color: var(--text);
+  line-height: 1.7;
+}
+
+.selector-pill {
+  display: block;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 18px;
+  background: #fff;
+  transition: 0.25s ease;
+  height: 75%;
+  text-decoration: none;
+}
+
+.selector-pill:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 118, 144, 0.35);
+  box-shadow: 0 12px 24px rgba(0, 118, 144, 0.08);
+}
+
+.selector-pill .size {
+  display: block;
+  font-size: 1.35rem;
+  color: var(--heading);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.selector-pill p {
+  margin-bottom: 0;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.selector-pill small {
+  display: block;
+  margin-top: 10px;
+  color: var(--brand);
+  font-weight: 700;
+}
+
+/* RWD */
+@media (max-width: 1199.98px) {
+  .selector-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .quick-selector {
+    margin-top: 0;
+  }
+
+  .selector-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .quick-selector-card {
+    padding: 22px;
+  }
+}
+	
+.hero-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: var(--radius-sm);
+  display: inline-block;
+}
+
+.btn-outline {
+  background: 0 0;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: var(--radius-sm);
+  display: inline-block;
+}
+
+.btn-download {
+  background: 0 0;
+  border: 1px solid #999;
+  color: #444;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: var(--radius-sm);
+  display: inline-block;
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background: var(--bg-section);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.hero-text {
+  flex: 1 1 360px;
+  min-width: 280px;
+}
+
+.hero-eyebrow {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+}
+
+.hero-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--brand-dark);
+  line-height: 1.3;
+  margin: 0 0 12px;
+}
+
+.hero-subtitle {
+  font-size: 16px;
+  color: var(--text-light);
+  margin: 0 0 16px;
+}
+.hero-caption {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #6b7280;          /* 灰色註解 */
+    text-align: center;
+}
+
+
+.hero-gallery {
+    margin-top: 15px;
+    display: flex;
+    gap: 12px;
+	object-fit: contain;
+background: #F3F4F6;
+
+}
+
+.hero-gallery img {
+    display: block;
+    width: 260px;
+    height: 180px;
+    object-fit: cover;
+}
+	
+.gallery-item {
+    width: 33.333%;
+    margin: 0;
+    text-align: center;
+}
+
+/* 固定比例容器（最重要） */
+.img-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;   /* 可改 1/1、16/9 */
+    overflow: hidden;
+    border-radius: 6px;
+    background: #F3F4F6;
+}
+
+.img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;     /* 裁切填滿，不變形 */
+    display: block;
+}
+
+.gallery-item figcaption {
+    margin-top: 6px;
+    font-size: 13px;
+    color: #6b7280;
+}
+
+/* 平板 */
+@media (max-width: 992px) {
+    .gallery-item figcaption {
+        font-size: 12px;
+    }
+}
+
+/* 手機 */
+@media (max-width: 576px) {
+    .hero-gallery {
+        flex-direction: column;
+    }
+
+    .gallery-item {
+        width: 100%;
+    }
+}
+
+
+.hero-media {
+  flex: 1 1 320px;
+  min-width: 280px;
+}
+
+.hero-media img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+}
+
+.hero-caption {
+  font-size: 13px;
+  color: var(--text-light);
+  margin-top: 8px;
+}
+
+.img-1140 {
+  max-width: 1140px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.section {
+  margin-top: 56px;
+}
+
+.section-headline {
+  position: relative;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--brand-dark);
+  line-height: 1.3;
+  margin-bottom: 8px;
+  padding: 12px 32px 0;
+}
+
+.section-headline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 32px;
+  width: 50px;
+  height: 4px;
+  background-color: #007690;
+  border-radius: 2px;
+}
+
+.section-desc {
+  font-size: 16px;
+  color: var(--text-light);
+  margin: 0 0 24px;
+  max-width: 1140px;
+  padding: 0 32px;
+}
+
+.value-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.value-card {
+  background: var(--card-bg);
+  border: 1px solid #e5e7eb;
+  border-radius: var(--radius-lg);
+  flex: 1 1 240px;
+  min-width: 240px;
+  padding: 20px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.03);
+  transition: all 0.25s ease;
+  cursor: default;
+}
+
+.value-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-section);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 12px;
+  transition: all 0.25s ease;
+}
+
+.value-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-main);
+  margin: 0 0 6px;
+  line-height: 1.4;
+  transition: color 0.25s ease;
+}
+
+.value-text {
+  font-size: 16px;
+  color: var(--text-light);
+  line-height: 1.5;
+  margin: 0;
+  transition: color 0.25s ease;
+}
+
+.value-card:hover {
+  background-color: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+.value-card:hover .value-icon {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+.value-card:hover .value-text,
+.value-card:hover .value-title {
+  color: #fff;
+}
+
+.usecase-wrapper {
+  background: var(--bg-section);
+  border-radius: var(--radius-lg);
+  margin-top: 24px;
+  padding: 32px;
+  gap: 24px;
+}
+
+.usecase-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.usecase-item {
+  flex: 1 1 240px;
+  min-width: 240px;
+  background: #fff;
+  border-radius: var(--radius-sm);
+  border: 1px solid #e5e7eb;
+  padding: 16px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.03);
+}
+
+.usecase-item-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-main);
+  margin: 0 0 6px;
+}
+
+.usecase-item-text {
+  font-size: 16px;
+  color: var(--text-light);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.usecase-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.usecase-item {
+  flex: 1 1 240px;
+  min-width: 240px;
+  background: #fff;
+  border-radius: var(--radius-sm);
+  border: 1px solid #e5e7eb;
+  padding: 0;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.03);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.usecase-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+}
+
+.usecase-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.usecase-item:hover .usecase-img {
+  transform: scale(1.05);
+}
+
+.usecase-content {
+  padding: 16px;
+}
+
+.usecase-item-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-main);
+  margin: 0 0 6px;
+}
+
+.usecase-item-text {
+  font-size: 16px;
+  color: var(--text-light);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.cta-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.cta-card {
+  flex: 1 1 260px;
+  min-width: 260px;
+  border: 1px solid #e5e7eb;
+  border-radius: var(--radius-lg);
+  background: #fff;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.03);
+  padding: 20px;
+  text-decoration: none;
+  color: var(--text-main);
+  transition: all 0.25s;
+}
+
+.cta-card-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--brand-dark);
+  margin: 0 0 8px;
+  line-height: 1.4;
+}
+
+.cta-card-text {
+  font-size: 16px;
+  color: var(--text-light);
+  line-height: 1.5;
+  margin: 0 0 16px;
+}
+
+.cta-card-link {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.cta-card:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.cta-card:hover .cta-card-link,
+.cta-card:hover .cta-card-text,
+.cta-card:hover .cta-card-title {
+  color: #fff;
+}
+
+.cta-card:hover .cta-card-link {
+  text-decoration: none;
+}
+
+.specs-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+
+.specs-list {
+  font-size: 16px;
+  color: var(--text-main);
+  margin: 0;
+  padding-left: 18px;
+  line-height: 1.5;
+}
+
+.specs-list li {
+  margin-bottom: 6px;
+  color: var(--text-light);
+}
+
+.specs-list li span {
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+.validation-section {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-top: 56px;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.validation-section::before {
+  content: "";
+  background: url('https://www.britemed.com.tw/_upload/news/images/Medical%20Device%20OEMODM/Background2.jpeg')
+    center/cover no-repeat;
+  position: absolute;
+  inset: 0;
+  opacity: 0.2;
+}
+
+.validation-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.validation-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 24px;
+  justify-content: flex-start;
+}
+
+.cert-block {
+  flex: 1 1 220px;
+  min-width: 200px;
+  text-align: center;
+}
+
+.cert-img {
+  max-width: 95%;
+  margin: 20px auto;
+  cursor: zoom-in;
+  transition: transform 0.3s;
+  display: block;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+  background: #fff;
+}
+
+.cert-img:hover {
+  transform: scale(1.02);
+}
+
+.cert-label {
+  font-size: 16px;
+  color: var(--text-light);
+  line-height: 1.4;
+  margin: 8px 0 0;
+}
+
+.cert-label p {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 18px;
+  margin: 8px 0;
+}
+
+.cert-label img {
+  width: 28px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.video-section {
+  padding: 20px 0;
+}
+
+.video-wrap {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.video-embed {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #000;
+}
+
+.video-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.oem-box {
+  background: var(--brand-dark);
+  color: #fff;
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.25);
+}
+
+.oem-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 12px;
+  line-height: 1.4;
+}
+
+.oem-text {
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 0 0 16px;
+  color: #e6f2f4;
+}
+
+.oem-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.badge-chip {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  line-height: 1.4;
+}
+
+.final-cta {
+  text-align: center;
+  margin-top: 56px;
+  padding-top: 32px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.final-cta-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--brand-dark);
+  line-height: 1.4;
+  margin: 0 0 12px;
+}
+
+.final-cta-text {
+  font-size: 15px;
+  color: var(--text-light);
+  max-width: 520px;
+  margin: 0 auto 20px;
+  line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+  .feature-overlay {
+    padding: 20px 16px;
+  }
+
+  .hero-title {
+    font-size: 24px;
+  }
+
+  .section-headline {
+    font-size: 20px;
+  }
+
+  .final-cta-title {
+    font-size: 18px;
+  }
+
+  .specification-tabs-section {
+    max-width: 1140px;
+    margin: 56px auto;
+    font-family: Arial, "Microsoft JhengHei", "Microsoft YaHei", sans-serif;
+    color: #333;
+    line-height: 1.5;
+  }
+
+  .spec-title {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  .spec-title h2 {
+    display: inline-block;
+    font-size: 22px;
+    font-weight: 700;
+    color: #007690;
+    border-bottom: 3px solid #007690;
+    padding-bottom: 4px;
+  }
+
+  .sub-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .sub-tab-btn {
+    background: #e4f4f7;
+    border: 1px solid #007690;
+    border-radius: 999px;
+    padding: 12px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #007690;
+    line-height: 1.2;
+    cursor: pointer;
+    min-width: 180px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .sub-tab-btn:hover {
+    background: #007690;
+    color: #fff;
+  }
+
+  .sub-tab-btn.active {
+    background: #007690;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 118, 144, 0.3);
+  }
+
+  .specs-table-wrapper.compact {
+    background: 0 0;
+    border-radius: 0;
+    box-shadow: none;
+    border: 0;
+    padding: 0;
+    overflow-x: auto;
+  }
+
+  .specs-table.flat {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+  }
+
+  .specs-table.flat th {
+    background: #f2f8f9;
+    color: #000;
+    font-weight: 600;
+    text-align: left;
+    vertical-align: top;
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+    width: 280px;
+    white-space: nowrap;
+  }
+
+  .specs-table.flat td {
+    background: #fff;
+    color: #333;
+    text-align: left;
+    vertical-align: top;
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+}
+
+@media (max-width: 600px) {
+  .sub-tab-btn {
+    min-width: auto;
+    font-size: 14px;
+    padding: 10px 14px;
+  }
+
+  .specs-table.flat td,
+  .specs-table.flat th {
+    font-size: 13px;
+    padding: 8px;
+  }
+}
+
+.ecg-content-wrapper {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .bg-features {
+    background-attachment: scroll;
+  }
+}
+
+.banner .container {
+  width: min(1140px, 100%);
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 992px) {
+  .banner-title-box {
+    max-width: 60%;
+    min-width: 320px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .ecg-content-wrapper {
+    font-size: 16px;
+  }
+}
+
+.page-wrapper {
+  width: min(1140px, 100%);
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 20px;
+    gap: 16px;
+  }
+
+  .hero-media,
+  .hero-text {
+    flex: 1 1 100%;
+    min-width: 0;
+  }
+
+  .hero-cta-row {
+    gap: 10px;
+  }
+
+  .hero-cta-row a {
+    flex: 1 1 220px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-headline {
+    text-align: center;
+    padding: 12px 16px 0;
+  }
+
+  .section-headline::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .section-desc {
+    text-align: center;
+    padding: 0 16px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-cta-row a {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+}
+
+.feature-overlay {
+  width: min(1140px, 100%);
+  margin: 0 auto;
+  padding: 32px 16px;
+  box-sizing: border-box;
+}
+
+.specification-tabs-section {
+  width: min(1140px, 100%);
+  margin: 56px auto;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.specs-table.flat th {
+  width: 280px;
+}
+
+@media (max-width: 480px) {
+  .section-headline {
+    font-size: 20px;
+  }
+
+  .section-desc {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .specs-table.flat th {
+    width: 200px;
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  .specs-table.flat td {
+    word-break: break-word;
+  }
+}
+
+@media (max-width: 600px) {
+  .validation-section {
+    padding: 20px 16px;
+  }
+
+  .cert-img {
+    max-width: 100%;
+  }
+}
+
+.cert-block,
+.cta-card,
+.usecase-item,
+.value-card {
+  min-width: 0;
+}
+
+@media (min-width: 576px) and (max-width: 991px) {
+  .cta-links,
+  .specs-grid,
+  .usecase-list,
+  .validation-grid,
+  .value-grid {
+    gap: 20px;
+  }
+
+  .cert-block,
+  .cta-card,
+  .usecase-item,
+  .value-card {
+    flex: 0 0 calc(50% - 10px);
+    max-width: calc(50% - 10px);
+  }
+
+  .usecase-img {
+    height: 170px;
+  }
+}
+
+@media (max-width: 575px) {
+  .cta-links,
+  .specs-grid,
+  .usecase-list,
+  .validation-grid,
+  .value-grid {
+    gap: 16px;
+  }
+
+  .cert-block,
+  .cta-card,
+  .usecase-item,
+  .value-card {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .usecase-img {
+    height: 180px;
+  }
+
+  .hero-cta-row a {
+    flex: 1 1 100%;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 992px) {
+  .cert-block,
+  .cta-card,
+  .usecase-item,
+  .value-card {
+    flex: 1 1 calc(50% - 24px);
+    min-width: 280px;
+  }
+}
+
+@media (max-width: 600px) {
+  .cta-links,
+  .specs-grid,
+  .usecase-list,
+  .validation-grid,
+  .value-grid {
+    gap: 16px;
+  }
+
+  .cert-block,
+  .cta-card,
+  .usecase-item,
+  .value-card {
+    flex: 1 1 100%;
+    min-width: 0;
+  }
+
+  .usecase-img {
+    height: 180px;
+  }
+}
+
+
+
+.spec-title {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.spec-title h2 {
+  display: inline-block;
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+  color: #007690;
+  border-bottom: 3px solid #007690;
+  padding-bottom: 4px;
+}
+
+.sub-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.sub-tab-btn {
+  background: #e4f4f7;
+  border: 1px solid #007690;
+  border-radius: 999px;
+  padding: 12px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #007690;
+  line-height: 1.2;
+  cursor: pointer;
+  min-width: 180px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.sub-tab-btn:hover {
+  background: #007690;
+  color: #fff;
+}
+
+.sub-tab-btn.active {
+  background: #007690;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 118, 144, 0.3);
+}
+
+.specs-table-wrapper.compact {
+  background: 0 0;
+  border-radius: 0;
+  box-shadow: none;
+  border: 0;
+  padding: 0;
+  overflow-x: auto;
+}
+
+.specs-table.flat {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+
+.specs-table.flat th {
+  background: #f2f8f9;
+  color: #000;
+  font-weight: 600;
+  text-align: left;
+  vertical-align: top;
+  padding: 10px;
+  border-bottom: 1px solid #e0e0e0;
+  width: 200px;
+  white-space: normal;
+  word-break: break-word;
+  font-size: 13px;
+}
+
+.specs-table.flat td {
+  background: #fff;
+
+  color: #333;
+  text-align: left;
+  vertical-align: top;
+  padding: 8px;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 13px;
+  word-break: break-word;
+}
+
+
+	/* Model cards */
+  .model-grid{display:flex;flex-wrap:wrap;gap:24px;}
+  .model-card{
+    flex:1 1 320px;min-width:280px;background:var(--card);
+    border:1px solid var(--border);border-radius:var(--r-lg);
+    overflow:hidden;box-shadow:0 12px 32px rgba(0,0,0,.03);
+    text-decoration:none;color:inherit;transition:all .25s;
+	  cursor: pointer; /* ← 補這一行 */
+  }
+  .model-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.10);border-color:#cfe7ea;}
+  .model-img{width:220px;height:128px;object-fit:contain;display:block;margin: 0 auto;transition:transform .35s;}
+  .model-card:hover .model-img{transform:scale(1.04);}
+  .model-body{padding:16px;}
+  .model-title{margin:0 0 6px;font-size:16px;font-weight:800;color:var(--brand-dark);}
+  .model-meta{margin:0 0 10px;color:var(--muted);font-size:14px;}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;}
+  .chip{
+    font-size:12px;padding:5px 8px;border-radius:999px;
+    background:#f2f8f9;border:1px solid #dfe7ea;color:#355;
+    line-height:1.2;
+  }
+  .model-cta{margin-top:12px;color:var(--brand);font-weight:700;font-size:14px;text-decoration:underline;}
+
+  /* Optional: quick filter (size) */
+  .filter-bar{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 16px;}
+  .filter-btn{
+    border:1px solid var(--brand);background:#007690;color:#ffffff;        /* 改為白色 */
+    padding:8px 12px;border-radius:999px;font-weight:700;font-size:13px;cursor:pointer;
+    transition:all .2s;
+  }
+  .filter-btn:hover,.filter-btn.active{background:#f2f8f9;   /* chip 的背景色 */border-color: #dfe7ea; /* chip 的邊框色 */
+  color: #355;           /* chip 的字色 */}
+
+	/* =======================
+   Model Card - Spec rows (方案A)
+   ======================= */
+.model-specs{
+  margin-top:10px;
+  display:grid;
+  gap:6px;
+}
+.model-spec{
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  font-size:13px;
+  color:var(--muted);
+  border-top:1px dashed #e8eef0;
+  padding-top:6px;
+}
+.model-spec:first-child{
+  border-top:0;
+  padding-top:0;
+}
+.model-spec span:first-child{
+  color:#355;
+  font-weight:700;
+}
+.model-spec span:last-child{
+  color:#333;
+  font-weight:600;
+  text-align:right;
+} 
+@media (min-width: 992px) {
+  .spec-title h2 {
+    font-size: 28px;
+  }
+
+  .sub-tabs {
+    gap: 12px;
+  }
+
+  .sub-tab-btn {
+    min-width: 180px;
+    padding: 12px 20px;
+    font-size: 15px;
+  }
+
+  .specs-table.flat th {
+    width: 280px;
+    white-space: nowrap;
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .specs-table.flat td {
+    font-size: 16px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .specs-grid,
+  .value-grid {
+    justify-content: center;
+  }
+}
+
+
+
+/* APPLICATION SCENARIOS */
+.section-padding {
+  padding: 60px 0;
+}
+
+.section-soft {
+  background: var(--bg-soft);
+}
+
+.section-headline {
+  max-width: 760px;
+  margin-bottom: 42px;
+}
+
+.section-headline h2 {
+  color: var(--heading);
+  line-height: 1.25;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.section-headline p {
+  color: var(--text);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.scenarios-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.scenario-card {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(0, 118, 144, 0.08);
+  height: 100%;
+}
+
+.scenario-card-image {
+  aspect-ratio: 16 / 9;
+  background-size: cover;
+  background-position: center;
+}
+
+.scenario-card-body {
+  padding: 28px;
+}
+
+.scenario-card-body h3 {
+  color: var(--heading);
+  line-height: 1.25;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.scenario-card-body p {
+  color: var(--text);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 18px 0 0;
+  color: var(--text);
+}
+
+.feature-list li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.feature-list li::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--brand);
+  position: absolute;
+  left: 0;
+  top: 6px;
+}
+
+.recommended-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+  padding: 8px 14px;
+  background: var(--brand-light);
+  color: var(--brand-dark);
+  font-weight: 700;
+  border-radius: 999px;
+  font-size: 0.92rem;
+}
+
+.design-note {
+  border-left: 4px solid var(--brand);
+  background: #fff;
+  padding: 20px 22px;
+  border-radius: 0 14px 14px 0;
+  box-shadow: 0 8px 20px rgba(0, 59, 77, 0.06);
+  margin-top: 18px;
+  font-size: 0.92rem;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+@media (max-width: 991.98px) {
+  .scenarios-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-padding {
+    padding: 48px 0;
+  }
+}
+</style>
+	
+	
+	</head>
+
+<body>
+	<div class="ecg-content-wrapper bg-features">
+        <div class="landing_wall">
+            <!-- ========== Banner 區塊 ========== -->
+            <section class="banner">
+                <div class="container">
+                    <div class="banner-title-box">
+                        <h1>BriteMED® Medical Monitor / Surgical Display Series</h1>
+                    </div>
+                </div>
+            </section>
+
+            <div class="page-wrapper">
+<section>
+                <div>
+                    <img src="../page3/images/MedicalMonitor.webp"
+                        alt="BriteMED MedicalMonitor" class="img-responsive img-1140">
+                </div>
+</section>
+				
+				<!-- QUICK SELECTOR -->
+    <section class="quick-selector">
+        <div class="quick-selector-card">
+          <div class="selector-grid">
+            <div class="selector-intro">
+              <span class="eyebrow">Quick Selector</span>
+              <h2 class="mb-2">Start by Screen Size</h2>
+              <p>Explore clinical and surgical monitor solutions by application and screen size.&nbsp;</p>
+<p>&nbsp;</p>
+            </div>
+            <a class="selector-pill" href="#size-21-5">
+              <span class="size">21.5"</span>
+              <p>Compact for bedside, carts, and space-limited installations.</p>
+              <small>Clinical + Surgical</small>
+            </a>
+            <a class="selector-pill" href="#size-23-8">
+              <span class="size">23.8"</span>
+              <p>Balanced size for daily clinical viewing and workstation use.</p>
+              <small>Clinical</small>
+            </a>
+            <a class="selector-pill" href="#size-27">
+              <span class="size">27"</span>
+              <p>Larger screen for multi-view imaging and OR visibility.</p>
+              <small>Clinical + Surgical</small>
+            </a>
+          </div>
+        </div>
+    </section>
+
+				<!-- APPLICATION SCENARIOS -->
+    <section class="section-padding section-soft" id="applications">
+        <div class="section-headline">
+          <span class="eyebrow">Application Scenarios</span>
+          <h2>Proven in Real Scenarios</h2>
+          <p>Designed for clinical imaging workflows across different care settings</p>
+        </div>
+        <div class="scenarios-grid">
+          <article class="scenario-card">
+            <div class="scenario-card-image" style="background-image:url('./images/OperatingRoom(OR).webp');"></div>
+            <div class="scenario-card-body">
+              
+              <h3>Operating Rooms / Endoscopy Suites</h3>
+              <p>Clear, consistent image viewing for surgical procedures and real-time imaging display.
+Built for surgical environments where image stability, visibility, and multi-source integration are critical.</p>
+              <ul class="feature-list">
+                <li>Supports surgical workflow and real-time image observation</li>
+                <li>Compatible with HDMI, DVI, and optional advanced signal inputs (e.g., 3G-SDI)</li>
+                <li>Enables multi-modality comparison via PIP / PBP functions</li>
+              </ul>
+              <div class="recommended-tag">Recommended: Surgical Monitor 21.5" / 27"</div>
+            </div>
+          </article>
+
+          <article class="scenario-card">
+            <div class="scenario-card-image" style="background-image:url('./images/NurseStationClinicalWorkstation2.webp');"></div>
+            <div class="scenario-card-body">
+              
+              <h3>Clinical Workstations / Nursing Stations</h3>
+              <p>Focused on daily patient observation, nurse visibility, and flexible installation. Reliable image monitoring and patient data visualization for daily clinical operations. Designed for continuous use in nursing stations and clinical work areas, ensuring clear display of patient data and medical images.</p>
+              <ul class="feature-list">
+                <li>Ideal for patient monitoring, EMR viewing, and clinical image review</li>
+                <li>Supports multiple input sources for simultaneous system integration</li>
+                <li>Flexible mounting for walls, arms, or carts</li>
+              </ul>
+              <div class="recommended-tag">Recommended: Clinical Monitor 21.5" / 23.8" / 27"</div>
+              
+            </div>
+          </article>
+
+          <article class="scenario-card">
+            <div class="scenario-card-image" style="background-image:url('./images/Clinics.webp');"></div>
+            <div class="scenario-card-body">
+             
+              <h3>Clinics</h3>
+              <p>Versatile display solution for outpatient diagnosis and routine examinations. </p>
+              <ul class="feature-list">
+                <li>Supports image review and daily clinical viewing</li>
+                <li>Highlights consistent grayscale and color presentation</li>
+                
+              </ul>
+              <div class="recommended-tag">Recommended: Clinical Monitor 23.8" / 27"</div>
+            </div>
+          </article>
+
+          <article class="scenario-card">
+            <div class="scenario-card-image" style="background-image:url('./images/MedicalCartIntegration.webp');"></div>
+            <div class="scenario-card-body">
+              <h3>Mobile Cart / Telehealth Integration</h3>
+              <p>Flexible and mobile display solution for point-of-care applications. Engineered for integration with medical carts, supporting mobility across wards, emergency rooms, and telehealth scenarios.</p>
+              <ul class="feature-list">
+                <li>Supports multi-device connection for integrated workflows</li>
+                <li>Suitable for mobile care, telemedicine, and bedside applications</li>
+                <li>Supports installation flexibility and system-level integration</li>
+              </ul>
+              <div class="recommended-tag">Recommended: Clinical Monitor 21.5" / 23.8"</div>
+              
+            </div>
+          </article>
+        </div>
+    </section>
+
+                <!-- HERO -->
+<section class="hero">
+    <div class="hero-text">
+        <div class="hero-eyebrow">Seamless Integration - Medical Display</div>
+        <h2 class="hero-title">Flexible Mounting &amp; Integration for Medical Displays</h2>
+
+        
+
+        <div class="hero-cta-row">
+            <a class="btn-primary" href="#contact">Request a Demo</a>
+            <a class="btn-outline" href="#specs">View Tech Specs</a>
+        </div>
+    </div>
+
+    <div class="hero-media">
+        <figure class="hero-figure">
+            <img src="../page3/images/MedicalMonitor2.webp"
+                 alt="BriteMED Medical Display"
+                 class="img-responsive" />
+
+            <!-- 註解 / Caption -->
+            <figcaption class="hero-caption">
+				(MMS 27" Back)<br>
+            Mounting Option for all Series-VESA-Compliant Mounting.<br>
+				Supports VESA mounting for flexible installation on walls or medical carts.
+            </figcaption>
+        </figure>
+
+        <!-- 三張橫列圖片 -->
+        <div class="hero-gallery">
+
+    <figure class="gallery-item">
+        <div class="img-wrap">
+            <img src="../page3/images/MedicalMonitorStandArm_1.webp"
+     alt="Multi-source input support"
+     width="260"
+     height="180" />
+
+        </div>
+        <figcaption>STAND-DWH-R10</figcaption>
+    </figure>
+
+    <figure class="gallery-item">
+        <div class="img-wrap">
+            <img src="../page3/images/MedicalMonitorStandArm_2.webp" alt="PIP / PBP comparison mode" 
+			width="260"
+     height="180"	 />
+        </div>
+        <figcaption>PCA-AUW10-R1</figcaption>
+    </figure>
+
+    <figure class="gallery-item">
+        <div class="img-wrap">
+            <img src="../page3/images/MedicalMonitorStandArm_3.webp" alt="PIP / PBP comparison mode" 
+			width="260"
+     height="180"	 />
+        </div>
+        <figcaption>PCA-AUW20-R1</figcaption>
+    </figure>
+
+</div>
+</div>
+
+</section>
+
+
+                <!-- VALUE PROPOSITIONS / FEATURES -->
+                <section class="bg-features">
+                    <div class="usecase-wrapper">
+                        <h2 class="section-headline">Series Highlights</h2>
+                        <p class="text-base section-desc">
+                            Shared strengths across the series — built for integration, usability, and consistent clinical viewing.&nbsp;Designed as a medical-grade display for reliable operation in clinical environments.</p>
+
+                        <div class="value-grid">
+                          <div class="value-card">
+                                <div class="value-icon">I/O</div>
+                            <h3 class="value-title">Versatile Connection</h3>
+                              <p class="text-base value-text">Supports both conventional analog and digital signal input/output, allowing seamless integration with various operating room equipment and enabling daisy-chain connection of multiple displays for simultaneous visualization.</p>
+                            </div>
+
+                          <div class="value-card">
+                                <div class="value-icon">HD</div>
+                                <h3 class="value-title">Full-HD / High-Resolution LCD Panel</h3>
+                              <p class="text-base value-text">Delivers high resolution, high contrast, and wide viewing angles, enabling surgeons to observe medical images with enhanced precision and clarity.
+							  </p>
+                            </div>
+
+                          <div class="value-card">
+                              <div class="value-icon">D&nbsp;</div>
+                                <h3 class="value-title">DICOM / Gamma Calibration</h3>
+                            <p class="text-base value-text">The compliance with DICOM/ GAMMA ensures optimized color and gray scale reproduction for best image accuracy.</p>
+                                <p class="text-base value-text">Optimizes color rendition for superior color accuracy and enhances grayscale consistency, ensuring precise medical image presentation and reducing the risk of diagnostic misinterpretation.&nbsp;</p>
+                            </div>
+
+                          <div class="value-card">
+                                <div class="value-icon">QA</div>
+                                <h3 class="value-title">Medical-Grade Build | Validation &amp; Compliance</h3>
+                            <p class="text-base value-text">Designed and manufactured under ISO 13485-quality
+                                    management to
+                                    support regulatory pathways&nbsp;with documented verification &amp; validation.</p>
+                              <p class="text-base flex-inline-center"><img
+                                        src="https://www.britemed.com.tw/_upload/support/images/Product/IECCHECK.png"
+                                        alt="IECCheck" width="20" class="img-responsive icon-sm">IEC 60601-1</p>
+							  <p class="text-base flex-inline-center"><img
+                                        src="https://www.britemed.com.tw/_upload/support/images/Product/IECCHECK.png"
+                                        alt="IECCheck" width="20" class="img-responsive icon-sm">IEC 60601-1-2</p>
+							  <p class="text-base flex-inline-center"><img
+                                        src="https://www.britemed.com.tw/_upload/support/images/Product/IECCHECK.png"
+                                        alt="IECCheck" width="20" class="img-responsive icon-sm">FCC Part18</p>
+                                <p class="text-base flex-inline-center"><img
+                                        src="https://www.britemed.com.tw/_upload/support/images/Product/IECCHECK.png"
+                                        alt="IECCheck" width="20" class="img-responsive icon-sm">EN 60601-1</p>
+                                <p class="text-base flex-inline-center"><img
+                                        src="https://www.britemed.com.tw/_upload/support/images/Product/IECCHECK.png"
+                                        alt="IECCheck" width="20" class="img-responsive icon-sm">EN 60601-1-2</p>
+							  
+                            
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                
+
+
+                <!-- Models -->
+                <section class="section" id="specs">
+                    <section class="section">
+                        <h2 class="section-headline">Select a Model</h2>
+                        <p class="text-base section-desc">
+                          Choose a size/configuration to view full specifications, ordering information, and downloadable resources.
+                      </p>
+
+    <!-- Optional size filters -->
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="21.5">21.5"</button>
+      <button class="filter-btn" data-filter="23.8">23.8"</button>
+      <button class="filter-btn" data-filter="27">27"</button>
+    </div>
+
+    <div class="model-grid" id="modelGrid">
+      <!-- 21.5 -->
+      <div class="model-card" data-size="21.5">
+        <img class="model-img" src="../page3/images/BDS21_220X128.png" alt="Medical Display 21.5 inch">
+        <div class="model-body">
+			<!-- ...內容... -->
+          <h3 class="model-title">BDS General Medical Display / Monitor 21.5"(Touch / Non-touch)</h3>
+          <p class="model-meta">Compact size for carts &amp; bedside integration.</p>
+          <div class="chips">
+            <span class="chip">Accurate Image Viewing</span>
+            <span class="chip">Easy installation / VESA-Compatible Mounting</span>
+		  <span class="chip">Multiple Digital Input Interfaces</span>
+		  
+          </div>
+			<div class="model-specs">
+      <div class="model-spec"><span>Size</span><span>21.5"</span></div>
+      <div class="model-spec"><span>Resolution</span><span>1920×1080</span></div>
+      <div class="model-spec"><span>Brightness</span><span>500 nits</span></div>
+      <div class="model-spec"><span>I/O</span><span>DP / HDMI / DVI</span></div>
+    </div>
+			
+          <div class="model-cta">
+  <a href="../page3/YOUR_URL" style="color: #007690;">View detailed specs →</a>
+</div>
+        </div>
+      </div>
+
+      <!-- 23.8 -->
+      <div class="model-card" data-size="23.8">
+  <img class="model-img" src="../page3/images/BDS23.8_220X128.png" alt="Medical Display 23.8 inch">
+  <div class="model-body">
+    <h3 class="model-title">BDS General Medical Display / Monitor 23.8"(Touch / Non-touch)</h3>
+    <p class="model-meta">Balanced size for clinical imaging workflows.</p>
+	  
+	  <div class="chips">
+            <span class="chip">Accurate Image Viewing</span>
+            <span class="chip">Easy installation / VESA-Compatible Mounting</span>
+		  <span class="chip">Multiple Digital Input Interfaces</span>
+          </div>
+
+    <div class="model-specs">
+      <div class="model-spec"><span>Size</span><span>23.8"</span></div>
+      <div class="model-spec"><span>Resolution</span><span>1920×1080</span></div>
+      <div class="model-spec"><span>Brightness</span><span>400 nits</span></div>
+      <div class="model-spec"><span>I/O</span><span>DP / HDMI / DVI</span></div>
+    </div>
+
+     <div class="model-cta">
+  <a href="https://www.britemed.com.tw/en/product/model.php?II=55" target="_blank" rel="noopener noreferrer" style="color: #007690;">View detailed specs →</a>
+</div>
+
+  </div>
+ </div>
+
+
+      <!-- 27 -->
+      <div class="model-card" data-size="27">
+        <img class="model-img" src="../page3/images/BDS27_220X128.png" alt="Medical Display 27 inch">
+        <div class="model-body">
+          <h3 class="model-title">BDS General Medical Display / Monitor 27"(Touch / Non-touch)</h3>
+          <p class="model-meta">Larger viewing area for OR and imaging rooms.</p>
+          <div class="chips">
+            <span class="chip">Accurate Image Viewing</span>
+            <span class="chip">Easy installation / VESA-Compatible Mounting</span>
+		    <span class="chip">Multiple Digital Input Interfaces</span>
+          </div>
+			
+			<div class="model-specs">
+      <div class="model-spec"><span>Size</span><span>27"</span></div>
+      <div class="model-spec"><span>Resolution</span><span>1920×1080</span></div>
+      <div class="model-spec"><span>Brightness</span><span>350 nits</span></div>
+      <div class="model-spec"><span>I/O</span><span>DP / HDMI / DVI</span></div>
+    </div>
+         <div class="model-cta">
+  <a href="../page3/YOUR_URL" style="color: #007690;">View detailed specs →</a>
+</div>
+        </div>
+       </div>
+		
+		
+		<!-- MMS21.5 -->
+      <div class="model-card" data-size="21.5">
+  <img class="model-img" src="../page3/images/BritemedMMS21.png" alt="Medical Display 21.5 inch">
+  <div class="model-body">
+    <h3 class="model-title">MMS    Medical Display / Monitor 21.5"(Touch / Non-touch)</h3>
+    <p class="model-meta">Compact size for carts &amp; bedside integration.</p>
+	  
+	  <div class="chips">
+            <span class="chip">Accurate Image Viewing</span>
+            <span class="chip">Easy installation / VESA-Compatible Mounting</span>
+		  <span class="chip">Multiple Digital Input / Output Interfaces</span>
+		  <span class="chip">Multiple Analog Inputs / Outputs</span>
+		  <span class="chip">Versatile Digital &amp; Analog Connectivity</span>
+          </div>
+
+    <div class="model-specs">
+      <div class="model-spec"><span>Size</span><span>21.5"</span></div>
+      <div class="model-spec"><span>Resolution</span><span>1920×1080</span></div>
+      <div class="model-spec"><span>Brightness</span><span>250 nits</span></div>
+      <div class="model-spec"><span>I/O (multi-option)</span><span>DVI / HDMI / 3G-SDI / VGA / CVBS / S-Video / Components / RGB </span></div>
+    </div>
+
+    <div class="model-cta">
+  <a href="../page3/YOUR_URL" style="color: #007690;">View detailed specs →</a>
+</div>
+  </div>
+ </div>
+		
+		
+		<!-- MMS27 -->
+      <div class="model-card" data-size="27">
+  <img class="model-img" src="../page3/images/MMS27_220X128.png" alt="Medical Display 27 inch">
+  <div class="model-body">
+    <h3 class="model-title">MMS High - Brightness Medical Display / Monitor 27"</h3>
+    <p class="model-meta">Larger viewing area for OR and imaging rooms.</p>
+	  
+	  <div class="chips">
+            <span class="chip">Accurate Image Viewing</span>
+            <span class="chip">Easy installation / VESA-Compatible Mounting</span>
+		  <span class="chip">Multiple Digital Input / Output Interfaces</span>
+		  <span class="chip">Multiple Analog Inputs / Outputs</span>
+		  <span class="chip">Versatile Digital &amp; Analog Connectivity</span>
+		  <span class="chip">Clinical-grade Image Viewing</span>
+          </div>
+
+    <div class="model-specs">
+      <div class="model-spec"><span>Size</span><span>27"</span></div>
+      <div class="model-spec"><span>Resolution</span><span>1920×1080</span></div>
+      <div class="model-spec"><span>Brightness</span><span>700 nits</span></div>
+      <div class="model-spec"><span>I/O (multi-option)</span><span>DVI / HDMI / 3G-SDI / VGA / CVBS / S-Video / Components / RGB</span></div>
+    </div>
+
+    <div class="model-cta">
+  <a href="../page3/YOUR_URL" style="color: #007690;">View detailed specs →</a>
+</div>
+  </div>
+ </div>
+		
+		
+		
+		
+    </div>
+  </section>
+</section>
+                <!-- PRODUCT VIDEO (YouTube) -->
+                <section class="section video-section">
+                    <div class="video-wrap">
+                        <div class="spec-title">
+                            <h2>Product Video</h2>
+                        </div>
+
+                        <div class="video-embed" aria-label="YouTube video">
+                            <iframe src="https://www.youtube.com/embed/u7fClLaW80U?si=W7yF1huWW_QF-TvN" title="Product Video"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share;"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </section>
+                <!-- OEM / MANUFACTURING CREDIBILITY -->
+                <section class="section">
+                    <div class="oem-box">
+                        <h2 class="oem-title">OEM/ODM/JDM/CMS Support</h2>
+
+                        <div class="oem-badges">
+                            <div class="badge-chip">ISO 13485</div>
+                            <div class="badge-chip">Regulatory Support (EU / US / JP)</div>
+                            <div class="badge-chip">In-house Electronics</div>
+                            <div class="badge-chip">PCBA + Final Assembly</div>
+                            <div class="badge-chip">Medical Device Expertise</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- FINAL CTA -->
+                <section class="final-cta" id="contact">
+
+
+
+                    <div class="hero-cta-row justify-center">
+                        <a class="btn-primary" href="https://www.britemed.com.tw/en/sales_inquiry_form/">
+                            Contact Sales
+                        </a>
+                        
+                        <a class="btn-outline" href="https://www.britemed.com.tw/en/qa/index.php?cat=1#content_top">
+                            View FAQ
+                        </a>
+
+
+                    </div>
+                </section>
+
+               <script>
+  // Optional: size filter
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('.model-card');
+
+  filterBtns.forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      filterBtns.forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const f = btn.dataset.filter;
+      cards.forEach(card=>{
+        const size = card.dataset.size;
+        card.style.display = (f === 'all' || f === size) ? 'block' : 'none';
+      });
+    });
+  });
+</script>
+              
+            </div>
+        </div>
+    </div>
+	
+</body>
+</html>
